@@ -5,8 +5,8 @@ import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 
 const API = 'https://ilove.sweatpals.com/api';
 const HOST = '510society_';
-const OUT = 'data/events.json';
-const IMG_DIR = 'assets/img/sp';
+const OUT = 'events.json';
+const IMG_DIR = '.';
 const SINCE = '2025-01-01T00:00:00.000Z';
 
 const getJSON = async (url, body) => {
@@ -38,7 +38,7 @@ const title = (s = '') => (s === s.toUpperCase() ? s.toLowerCase().replace(/\b\w
 
 async function saveFlyer(id) {
   if (!id) return null;
-  const path = `${IMG_DIR}/${id}.webp`;
+  const path = `${id}.webp`;
   if (await exists(path)) return path;
   try {
     const r = await fetch(`https://edge.sweatpals.com/api/files/${id}?variant=l`);

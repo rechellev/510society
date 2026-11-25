@@ -4,8 +4,8 @@
    Brand fonts: Racing Sans (display) + Sloop Script · Inter for text
    Glassy, rounded surfaces everywhere
    ===================================================================== */
-@font-face{font-family:'RacingSans';src:url('../fonts/RacingSansOne.ttf') format('truetype');font-display:swap}
-@font-face{font-family:'SloopScript';src:url('../fonts/SloopScript.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'RacingSans';src:url('RacingSansOne.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'SloopScript';src:url('SloopScript.ttf') format('truetype');font-display:swap}
 
 :root{
   --green:#14382B; --green-up:#1C4A39; --green-dn:#0F2C22;
@@ -495,7 +495,7 @@ a{color:inherit;text-decoration:none}
   .tl2-year+.tl2-i,.tl2-i+.tl2-year{margin-top:24px}
 }
 .panel.solid .bg{background:radial-gradient(120% 80% at 80% 10%,#C2283F 0%,#D92F26 45%,#5E0E1D 100%)!important}
-.panel.solid .bg::after{content:"";position:absolute;inset:0;background:url('../img/logo-ball-blue.png') center 32%/55% no-repeat;opacity:.18;mix-blend-mode:screen}
+.panel.solid .bg::after{content:"";position:absolute;inset:0;background:url('logo-ball-blue.png') center 32%/55% no-repeat;opacity:.18;mix-blend-mode:screen}
 .cta::before{background:radial-gradient(60% 50% at 50% 50%,rgba(15,44,34,.72),rgba(15,44,34,0) 75%),linear-gradient(180deg,rgba(20,56,43,.45) 0%,rgba(20,56,43,.15) 35%,rgba(20,56,43,.2) 65%,rgba(20,56,43,.7) 100%)!important}
 .hero-hed .sc-imm{color:var(--blue);font-size:1.45em;margin-left:.08em}
 .cta p{color:#fff!important;font-weight:500;text-shadow:0 1px 14px rgba(8,30,22,.8)}
@@ -592,7 +592,7 @@ a{color:inherit;text-decoration:none}
 @media (max-width:600px){.live-latest{grid-template-columns:1fr}.live-latest img{aspect-ratio:4/5}.lc-row{grid-template-columns:110px 1fr 38px}.acts-grid{grid-template-columns:1fr}}
 /* founder letter */
 .connect-letter{position:relative;overflow:hidden;border-radius:var(--r-lg);padding:clamp(28px,3.6vw,52px);background:radial-gradient(90% 70% at 100% 0%,rgba(255,255,255,.55),transparent 60%),var(--blue-grad);color:var(--green);display:flex;flex-direction:column;gap:14px;box-shadow:0 30px 70px -30px rgba(97,197,244,.55)}
-.connect-letter::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;background:url('../img/logo-ball-blue.png') center/contain no-repeat;opacity:.18;transform:rotate(-12deg)}
+.connect-letter::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;background:url('logo-ball-blue.png') center/contain no-repeat;opacity:.18;transform:rotate(-12deg)}
 .connect-letter .eyebrow{color:rgba(20,56,43,.65)}
 .cl-quote{font-size:clamp(18px,1.55vw,22px);line-height:1.5;font-weight:500;position:relative;z-index:1}
 .cl-sign{font-size:clamp(40px,4vw,58px);color:var(--green);transform:rotate(-4deg);align-self:flex-start;line-height:1;padding:.1em .05em 0}
@@ -823,7 +823,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:9998;pointer-events:non
 /* giant moving word band */
 .band{overflow:hidden;padding:clamp(60px,8vw,110px) 0;white-space:nowrap}
 .band-t{display:inline-flex;align-items:center;gap:.35em;font-family:var(--display);text-transform:uppercase;font-size:clamp(80px,13vw,220px);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.35);will-change:transform}
-.band-t i{display:inline-block;width:.42em;height:.42em;border-radius:50%;background:url('../img/logo-ball-blue.png') center/contain no-repeat;flex:none}
+.band-t i{display:inline-block;width:.42em;height:.42em;border-radius:50%;background:url('logo-ball-blue.png') center/contain no-repeat;flex:none}
 .band-t:nth-child(1) ~ *{display:none}
 
 /* gallery headline */
@@ -859,7 +859,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:9998;pointer-events:non
 .hl,.cl-cta .display em{text-transform:uppercase!important}
 /* manifesto over a tinted crowd photo */
 .manifesto{position:relative;overflow:hidden}
-.manifesto .mf-bg{position:absolute;inset:0;background:url('../img/hr-ty-class.jpg') center 45%/cover;-webkit-mask-image:linear-gradient(180deg,transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(180deg,transparent,#000 22%,#000 78%,transparent)}
+.manifesto .mf-bg{position:absolute;inset:0;background:url('hr-ty-class.jpg') center 45%/cover;-webkit-mask-image:linear-gradient(180deg,transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(180deg,transparent,#000 22%,#000 78%,transparent)}
 .manifesto .mf-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,44,34,.9),rgba(15,44,34,.72) 60%,rgba(15,44,34,.6))}
 .manifesto .wrap-wide{position:relative;z-index:1}
 .mf{color:rgba(255,255,255,.5)}
@@ -936,11 +936,11 @@ body::after{content:"";position:fixed;inset:-50%;z-index:9998;pointer-events:non
 .tl2{scroll-padding-inline:calc((100vw - var(--W))/2)}.tl2-year{margin-top:42px!important}
 /* word bands: slightly heavier outline + sport balls in event colors with the 510 logo */
 .band-t{-webkit-text-stroke:2.4px rgba(255,255,255,.42)!important}
-.band-t i{width:.5em!important;height:.5em!important;background:url('../img/logo-white.png') center 48%/64% no-repeat,url('../img/ball-tennis.svg') center/contain no-repeat!important;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}
-.band-t i:nth-of-type(5n+2){background:url('../img/logo-white.png') center 48%/64% no-repeat,url('../img/ball-pickle.svg') center/contain no-repeat!important}
-.band-t i:nth-of-type(5n+3){background:url('../img/logo-white.png') center 48%/64% no-repeat,url('../img/ball-pilates.svg') center/contain no-repeat!important}
-.band-t i:nth-of-type(5n+4){background:url('../img/logo-white.png') center 48%/64% no-repeat,url('../img/ball-henny.svg') center/contain no-repeat!important}
-.band-t i:nth-of-type(5n){background:url('../img/logo-white.png') center 48%/64% no-repeat,url('../img/ball-yoga.svg') center/contain no-repeat!important}
+.band-t i{width:.5em!important;height:.5em!important;background:url('logo-white.png') center 48%/64% no-repeat,url('ball-tennis.svg') center/contain no-repeat!important;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}
+.band-t i:nth-of-type(5n+2){background:url('logo-white.png') center 48%/64% no-repeat,url('ball-pickle.svg') center/contain no-repeat!important}
+.band-t i:nth-of-type(5n+3){background:url('logo-white.png') center 48%/64% no-repeat,url('ball-pilates.svg') center/contain no-repeat!important}
+.band-t i:nth-of-type(5n+4){background:url('logo-white.png') center 48%/64% no-repeat,url('ball-henny.svg') center/contain no-repeat!important}
+.band-t i:nth-of-type(5n){background:url('logo-white.png') center 48%/64% no-repeat,url('ball-yoga.svg') center/contain no-repeat!important}
 
 /* ===== fix round ===== */
 /* receipts: green text, lime ticker numbers */
@@ -1083,7 +1083,7 @@ html body .founder .display em,html body .founder .display em .split-w>span,.fou
 .mf{text-align:justify;text-align-last:left;hyphens:none}
 .mfp{background-size:cover,cover!important;background-position:center,center 35%!important;filter:brightness(1.25) saturate(1.1)!important}
 /* step-and-repeat overlay on the plain green */
-body{background-image:url('../img/step-repeat.png');background-size:1100px auto;background-repeat:repeat;background-attachment:fixed}
+body{background-image:url('step-repeat.png');background-size:1100px auto;background-repeat:repeat;background-attachment:fixed}
 body{background-size:1458px auto!important}
 /* photo sections sit on solid green so the pattern never shows through them */
 .hero,.cta,.statement,.manifesto,.sec.has-bg,.fx-sec .fx{background-color:var(--green)}

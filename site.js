@@ -15,7 +15,7 @@
 
   // ---------- events (from data/events.json, synced from Sweatpals) ----------
   const SP = 'https://sweatpals.com/host/510society_';
-  const IMG = 'assets/img/';
+  const IMG = '';
   const ART = [
     [/tennis|tenny|courtside/i, ['tennis-solo.jpg', 'tennis-serve.jpg', 'tennis-net.jpg'], 'Tennis'],
     [/pickle/i, ['pickle-paddle.jpg', 'pickle-duo.jpg', 'pickle-pals.jpg'], 'Pickleball'],
@@ -72,7 +72,7 @@
       if (filtersEl) filtersEl.style.display = 'none';
       observe();
     };
-    fetch('data/events.json', { cache: 'no-store' }).then((r) => r.json()).then((d) => {
+    fetch('events.json', { cache: 'no-store' }).then((r) => r.json()).then((d) => {
       const now = Date.now();
       const evs = (d.events || []).filter((e) => new Date(e.end || e.start).getTime() > now).sort((a, b) => new Date(a.start) - new Date(b.start));
       if (!evs.length) return none();
@@ -243,7 +243,7 @@ document.querySelectorAll('.spx-rail').forEach(r => {
   const fmtOf = (t) => FORMATS.find(([re]) => re.test(t));
   const SP = 'https://sweatpals.com/host/510society_';
 
-  Promise.all([fetch('data/events.json', { cache: 'no-store' }).then((r) => r.json()), fetch('data/partner-notes.json', { cache: 'no-store' }).then((r) => r.json()).catch(() => ({}))]).then(([d, notes]) => {
+  Promise.all([fetch('events.json', { cache: 'no-store' }).then((r) => r.json()), fetch('partner-notes.json', { cache: 'no-store' }).then((r) => r.json()).catch(() => ({}))]).then(([d, notes]) => {
     (d.past || []).forEach((e) => { (notes[e.date] || []).forEach((n) => {
       const hit = n.match && e.sponsors.find((s) => s.name.toLowerCase().includes(n.match.toLowerCase()));
       if (hit) { hit.name = n.name || hit.name; hit.what = n.what || hit.what; } else e.sponsors.push({ name: n.name, what: n.what, url: n.url || null });
@@ -348,7 +348,7 @@ document.querySelectorAll('.spx-rail').forEach(r => {
     const f = (t) => { const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3); el.textContent = fmt(to * e, el); if (p < 1) requestAnimationFrame(f); };
     requestAnimationFrame(f);
   });
-  fetch('data/events.json', { cache: 'no-store' }).then(r => r.json()).then(d => {
+  fetch('events.json', { cache: 'no-store' }).then(r => r.json()).then(d => {
     const st = d.stats || {};
     ticks.forEach(el => { const k = el.dataset.k; if (k && st[k]) { let v = st[k]; if (k === 'rsvps') v = Math.floor(v / 100) * 100; el.dataset.to = v; } });
   }).catch(() => {}).finally(() => {

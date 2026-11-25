@@ -1,0 +1,20 @@
+{
+  "_about": "Hand-written partner details. The Sweatpals sync never overwrites this file. Keyed by event date (YYYY-MM-DD). 'match' finds an existing Sweatpals sponsor by name; otherwise the partner is added.",
+  "2026-05-02": [
+    { "match": "Dobel", "name": "Maestro Dobel", "what": "Signature tequila bar" },
+    { "name": "Blossom by Kayla", "what": "Bloom bar" },
+    { "name": "Local vendor", "what": "Tacos" },
+    { "name": "Local vendor", "what": "The bar" },
+    { "name": "Local vendor", "what": "DIY hat station" }
+  ],
+  "2026-04-18": [
+    { "match": "Wellness Affair", "name": "The Wellness Affair", "what": "Local vendor market" },
+    { "match": "Coco Noir", "name": "Coco Noir Wine Bar", "what": "Wine and prosecco tasting" },
+    { "match": "Todos", "name": "Todos Cantina", "what": "Tacos" },
+    { "match": "Medina", "name": "Medina Events", "what": "Production support" },
+    { "match": "Love Stop", "name": "The Love Stop Flowers", "what": "Bloom bar" },
+    { "match": "Triple B", "name": "Triple B Balloons", "what": "Production partner" },
+    { "match": "ZaZa", "name": "ZaZa Cuisine", "what": "Food on site" },
+    { "match": "Drink Thick", "name": "Drink Thicc", "what": "Smoothies" }
+  ]
+}
