@@ -1339,3 +1339,15 @@ body:has(#tiers) .sticky-cta{display:none!important}
   .cards4::-webkit-scrollbar{display:none}
   .cards4>*{flex:0 0 78%;scroll-snap-align:start}
 }
+
+/* ===== round 2 polish ===== */
+/* cream sections: no keyline, solid brand blue for readability */
+html body .sec.light .display em:not(.lime):not(.hl):not(.script),
+html body .sec.light .display em:not(.lime):not(.hl):not(.script) .split-w>span{-webkit-text-stroke:0!important;background:none!important;-webkit-text-fill-color:#61C5F4!important;color:#61C5F4!important}
+/* header script words: calmer size so the swashes stay on screen */
+.hero-hed .script,.hero-hed .script.sc-imm{font-size:1.15em!important;line-height:.9}
+/* manifesto: plain words in white */
+.mf{color:#fff!important;-webkit-text-fill-color:#fff}
+.mf .mfp{-webkit-text-fill-color:transparent!important;color:transparent!important}
+/* footer: solid green so the logo stands alone */
+.foot{background:linear-gradient(180deg,rgba(20,56,43,0) 0,#14382B 140px,#14382B 100%)!important}
